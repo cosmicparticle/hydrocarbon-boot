@@ -11,6 +11,6 @@
 7. 用户根据需要做其他开发工作。
 
 ## 联系我们
->邮箱：kuangkie@126.com
->QQ：1048232397
->网址：https://www.kuangkic.com
+>邮箱：kuangkie@126.com  
+>QQ：1048232397  
+>网址：https://www.kuangkic.com  
