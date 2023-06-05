@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <version.hydrocarbon>1.0.6</version.hydrocarbon>
+        <version.hydrocarbon>1.0.8</version.hydrocarbon>
         <version.hydrocarbon-client>1.0.10</version.hydrocarbon-client>
         <output.dependence.file.path>lib/</output.dependence.file.path>
         <output.resource.file.path>resources/</output.resource.file.path>
