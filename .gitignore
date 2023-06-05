@@ -1,0 +1,10 @@
+
+/target
+src/main/resources/application.properties
+src/main/resources/config
+.settings
+.sts4-cache/classpath-data.json
+.project
+.classpath
+/.idea
+
