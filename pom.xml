@@ -60,7 +60,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <excludes>
-<!--                        <exclude>*.properties</exclude>-->
+                        <exclude>*.properties</exclude>
 <!--                        <exclude>*.xml</exclude>-->
                     </excludes>
                 </configuration>
