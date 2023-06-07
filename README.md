@@ -10,7 +10,8 @@
 6. 业务逻辑开发。用户可以在本项目中或复制的项目中编写业务代码。具体参见[KuangKie业务开发指南](https://www.kuangkie.com/kuangkie/guide/java-bnb)
 7. 用户根据需要做其他开发工作。
 
-## 联系我们
->邮箱：kuangkie@126.com  
->QQ：1048232397  
->网址：https://help.kuangkie.com  
+## 问题反馈
+如果在使用过程中发现任何问题、或者有改善建议，欢迎加入讨论群：
+>QQ群：1048232397  
+>邮箱：kuangkie@126.com   
+>网址：https://help.kuangkie.com   
