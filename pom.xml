@@ -11,15 +11,15 @@
     </parent>
     <groupId>cho.carbon</groupId>
     <artifactId>hydrocarbon-boot</artifactId>
-    <version>0.0.1</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <name>hydrocarbon-boot</name>
     <description></description>
 
     <properties>
         <java.version>1.8</java.version>
-        <version.hydrocarbon>1.0.8</version.hydrocarbon>
-        <version.hydrocarbon-client>1.0.10</version.hydrocarbon-client>
+        <version.hydrocarbon>1.0.11</version.hydrocarbon>
+        <version.hydrocarbon-client>1.0.11</version.hydrocarbon-client>
         <output.dependence.file.path>lib/</output.dependence.file.path>
         <output.resource.file.path>resources/</output.resource.file.path>
     </properties>
@@ -53,6 +53,12 @@
                     <includeSystemScope>true</includeSystemScope>
                     <addResources>true</addResources>
                     <mainClass>cho.carbon.hydrocarbon.HydrocarbonBootApplication</mainClass>
+<!--                    <includes>-->
+<!--                        <include>-->
+<!--                            <groupId>nothing</groupId>-->
+<!--                            <artifactId>nothing</artifactId>-->
+<!--                        </include>-->
+<!--                    </includes>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -61,10 +67,48 @@
                 <configuration>
                     <excludes>
                         <exclude>*.properties</exclude>
+                        <exclude>kuangkie/</exclude>
 <!--                        <exclude>*.xml</exclude>-->
                     </excludes>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <!-- MANIFEST.MF 中 Class-Path 各个依赖加入前缀 -->
+                            <!--lib文件夹内容，需要 maven-dependency-plugin插件补充 -->
+                            <classpathPrefix>${output.dependence.file.path}</classpathPrefix>
+                            <!-- jar包不包含唯一版本标识 -->
+                            <useUniqueVersions>false</useUniqueVersions>
+                            <!--指定入口类 -->
+                            <mainClass>com.kuangkie.hydrogen.HydrogenBootApplication</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <!--MANIFEST.MF 中 Class-Path 加入自定义路径，多个路径用空格隔开 -->
+                            <!--此处resources文件夹的内容，需要maven-resources-plugin插件补充上 -->
+                            <Class-Path>./${output.resource.file.path}</Class-Path>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
+            <!-- 依赖jar包复制到 target/lib目录 -->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-dependency-plugin</artifactId>-->
+<!--                <version>3.2.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>copy</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>copy-dependencies</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <type>jar</type>-->
+<!--                            <includeTypes>jar</includeTypes>-->
+<!--                            <outputDirectory>***</outputDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
