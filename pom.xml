@@ -18,8 +18,10 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <version.hydrocarbon>1.1.116</version.hydrocarbon>
-        <version.hydrocarbon-client>1.1.27</version.hydrocarbon-client>
+        <version.hydrocarbon>1.1.126</version.hydrocarbon>
+        <version.hydrocarbon-client>1.1.38</version.hydrocarbon-client>
+        <!--                <version.hydrocarbon>1.18.0</version.hydrocarbon>-->
+        <!--                <version.hydrocarbon-client>1.18.0</version.hydrocarbon-client>-->
         <version.hydrocarbon-client-h5>1.15.0</version.hydrocarbon-client-h5>
         <output.dependence.file.path>lib/</output.dependence.file.path>
         <output.resource.file.path>resources/</output.resource.file.path>
@@ -59,12 +61,12 @@
                     <includeSystemScope>true</includeSystemScope>
                     <addResources>true</addResources>
                     <mainClass>cho.carbon.hydrocarbon.HydrocarbonBootApplication</mainClass>
-<!--                    <includes>-->
-<!--                        <include>-->
-<!--                            <groupId>nothing</groupId>-->
-<!--                            <artifactId>nothing</artifactId>-->
-<!--                        </include>-->
-<!--                    </includes>-->
+                    <includes>
+                        <include>
+                            <groupId>nothing</groupId>
+                            <artifactId>nothing</artifactId>
+                        </include>
+                    </includes>
                 </configuration>
             </plugin>
             <plugin>
@@ -96,25 +98,25 @@
                 </configuration>
             </plugin>
             <!-- 依赖jar包复制到 target/lib目录 -->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-dependency-plugin</artifactId>-->
-<!--                <version>3.2.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>copy</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>copy-dependencies</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <type>jar</type>-->
-<!--                            <includeTypes>jar</includeTypes>-->
-<!--                            <outputDirectory>***</outputDirectory>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <type>jar</type>
+                            <includeTypes>jar</includeTypes>
+                            <outputDirectory>D:\\kuangkie\\product\\hydrocarbon-boot-jar\\lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
