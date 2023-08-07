@@ -18,27 +18,15 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <version.hydrocarbon>1.19.0</version.hydrocarbon>
-        <version.hydrocarbon-client>1.19.0</version.hydrocarbon-client>
-        <version.hydrocarbon-client-h5>1.19.0</version.hydrocarbon-client-h5>
+        <version.kuangkie>1.20.0</version.hydrocarbon>
         <output.dependence.file.path>lib/</output.dependence.file.path>
         <output.resource.file.path>resources/</output.resource.file.path>
     </properties>
     <dependencies>
          <dependency>
             <groupId>com.kuangkie</groupId>
-            <artifactId>hydrocarbon</artifactId>
-            <version>${version.hydrocarbon}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.kuangkie</groupId>
-            <artifactId>hydrocarbon-client</artifactId>
-            <version>${version.hydrocarbon-client}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.kuangkie</groupId>
-            <artifactId>hydrocarbon-client-h5</artifactId>
-            <version>${version.hydrocarbon-client-h5}</version>
+            <artifactId>kuangkie</artifactId>
+            <version>${version.kuangkie}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
