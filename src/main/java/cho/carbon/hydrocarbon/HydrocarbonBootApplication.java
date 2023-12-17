@@ -15,7 +15,6 @@ public class HydrocarbonBootApplication {
     static Logger logger = LoggerFactory.getLogger(HydrocarbonBootApplication.class);
 
     public static void main(String[] args) throws UnknownHostException {
-
         SpringApplication.run(HydrocarbonBootApplication.class, args);
 
     }
