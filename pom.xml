@@ -18,23 +18,22 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <version.kuangkie>0.0.68</version.kuangkie>
-<!--        <version.kuangkie>2.1.1</version.kuangkie>-->
+        <version.kuangkie>3.0.76</version.kuangkie>
 <!--        <version.hydrocarbon>1.1.132</version.hydrocarbon>-->
 <!--        <version.hydrocarbon-client>1.1.45</version.hydrocarbon-client>-->
 <!--        <version.hydrocarbon-client-h5>1.0.2</version.hydrocarbon-client-h5>-->
-<!--        <version.hydrocarbon>1.19.0</version.hydrocarbon>-->
-<!--        <version.hydrocarbon-client>1.19.0</version.hydrocarbon-client>-->
-<!--        <version.hydrocarbon-client-h5>1.19.0</version.hydrocarbon-client-h5>-->
+<!--        <version.hydrocarbon>3.0.2</version.hydrocarbon>-->
+<!--        <version.hydrocarbon-client>3.0.1</version.hydrocarbon-client>-->
+<!--        <version.hydrocarbon-client-h5>3.0.0</version.hydrocarbon-client-h5>-->
         <output.dependence.file.path>lib/</output.dependence.file.path>
         <output.resource.file.path>resources/</output.resource.file.path>
     </properties>
     <dependencies>
-                 <dependency>
-                    <groupId>com.kuangkie</groupId>
-                    <artifactId>kuangkie</artifactId>
-                    <version>${version.kuangkie}</version>
-                </dependency>
+        <dependency>
+            <groupId>com.kuangkie</groupId>
+            <artifactId>kuangkie</artifactId>
+            <version>${version.kuangkie}</version>
+        </dependency>
 <!--         <dependency>-->
 <!--            <groupId>com.kuangkie</groupId>-->
 <!--            <artifactId>hydrocarbon</artifactId>-->
@@ -42,7 +41,7 @@
 <!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>com.kuangkie</groupId>-->
-<!--            <artifactId>hydrocarbon-client</artifactId>-->
+<!--            <artifactId>hydrogen-client</artifactId>-->
 <!--            <version>${version.hydrocarbon-client}</version>-->
 <!--        </dependency>-->
 <!--        <dependency>-->
@@ -83,7 +82,7 @@
                 <configuration>
                     <excludes>
                         <exclude>*.properties</exclude>
-                        <exclude>kuangkie/</exclude>
+<!--                        <exclude>kuangkie/</exclude>-->
 <!--                        <exclude>*.xml</exclude>-->
                     </excludes>
                     <archive>

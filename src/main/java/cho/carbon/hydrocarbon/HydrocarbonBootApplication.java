@@ -7,16 +7,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.net.UnknownHostException;
 
+
 @SpringBootApplication(exclude = { RedisAutoConfiguration.class, MongoAutoConfiguration.class, DataSourceAutoConfiguration.class}  )
+@ComponentScan(value={"com.kuangkie.*","com.enhe.*"})
 public class HydrocarbonBootApplication {
     static Logger logger = LoggerFactory.getLogger(HydrocarbonBootApplication.class);
 
     public static void main(String[] args) throws UnknownHostException {
         SpringApplication.run(HydrocarbonBootApplication.class, args);
-
     }
 
 }
